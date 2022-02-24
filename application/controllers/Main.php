@@ -91,7 +91,9 @@ class Main extends CI_Controller {
                 redirect('main/new_order');
             }
         } else if ($segment_2 == 'order') {
-            $dataOrder = $this->order_api(array("created_by"=>$this->session->userdata('user_id')));
+            $where['order_status'] = 'new';
+            $where['created_by'] = $this->session->userdata('user_id');
+            $dataOrder = $this->order_api($where);
             $this->data['orderData'] = $dataOrder;
             $this->data['content'] = 'main/order';
             $this->load->view('layout_frontend_home', $this->data);

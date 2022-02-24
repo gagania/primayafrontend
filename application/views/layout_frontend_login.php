@@ -23,7 +23,7 @@
                         <!--Logo-->
                         <div id="logo">
                             <a href="<?= base_url() ?>" class="logo" >
-                                <img src="<?= base_url() ?>assets/polo/images/QR_Lab_Logo.png" alt="">
+                                <img src="" alt="">
                             </a>
                         </div>
                         <!--Top Search Form-->

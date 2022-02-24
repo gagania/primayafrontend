@@ -281,13 +281,7 @@ function add_product_order(baseUrl,controller,elm){
             },
         success: function(data)
         {
-            if (elm=='') {
-                $(data['htmldata']).appendTo('#product_branch_add > tbody');
-            } else {
-                $(data['htmldata']).appendTo('#'+elm+' > tbody');
-            }
-            
-            
+            $(data['htmldata']).appendTo('#'+elm+' > tbody');
         }
     });
 }
